@@ -1,0 +1,56 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: lightgray;
+  perspective: 600px;
+}
+
+.die {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: rotateX(60deg) rotateZ(30deg);
+  transform-style: preserve-3d;
+}
+
+.side {
+  position: absolute;
+  background: whitesmoke;
+  border: 1px solid darkgray;
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  margin-top: -100px;
+  opacity: 0.5;
+}
+
+
+#one {
+  transform: translate3d(0px, 0px, -100px);
+}
+
+#two {
+  transform: translate3d(100px, 0px, 0px) rotateX(-90deg) rotateY(90deg);
+}
+
+#three {
+  transform: translate3d(0px, -100px, 0px) rotateX(-90deg);
+}
+
+#four {
+  transform: translate3d(-100px, 0px, 0px) rotateX(-90deg) rotateY(90deg);
+}
+
+#five {
+  transform: translate3d(0px, 100px, 0px) rotateX(-90deg);
+}
+
+#six {
+  transform: translate3d(0px, 0px, 100px);
+}
+
+p {
+  font-size: 50px;
+}
