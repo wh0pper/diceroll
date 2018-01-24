@@ -7,33 +7,33 @@ body {
   perspective: 600px;
 }
 
-.die {
+#space {
+  transform: rotateX(60deg) rotateZ(20deg);
+}
+
+#die {
+}
+
+.object {
   position: absolute;
   left: 50%;
   top: 50%;
-  /*transform: rotateX(60deg) rotateZ(30deg);*/
   transform-style: preserve-3d;
-}
 
-.dieanimation {
-  animation: roll 10s linear infinite;
+}
+.dieAnimation {
+  animation: roll 2s linear;
 }
 
 @keyframes roll {
   to {
-    transform: rotateY(360deg) rotateZ(0deg) rotateX(720deg);
+    transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
   }
 }
 
-@keyframes arcUp {
-
-  50% { transform: translate3d(100px, -800px, 100px); }
-}
-
 .side {
-  position: absolute;
   background: whitesmoke;
-  border: 2px solid #efefef;
+  border: 1px solid grey;
   width: 200px;
   height: 200px;
   margin-left: -100px;
