@@ -11,46 +11,68 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: rotateX(60deg) rotateZ(30deg);
+  /*transform: rotateX(60deg) rotateZ(30deg);*/
   transform-style: preserve-3d;
+}
+
+.dieanimation {
+  animation: roll 10s linear infinite;
+}
+
+@keyframes roll {
+  to {
+    transform: rotateY(360deg) rotateZ(0deg) rotateX(720deg);
+  }
+}
+
+@keyframes arcUp {
+
+  50% { transform: translate3d(100px, -800px, 100px); }
 }
 
 .side {
   position: absolute;
   background: whitesmoke;
-  border: 1px solid darkgray;
+  border: 2px solid #efefef;
   width: 200px;
   height: 200px;
   margin-left: -100px;
   margin-top: -100px;
-  opacity: 0.5;
+  opacity: .95;
 }
-
 
 #one {
   transform: translate3d(0px, 0px, -100px);
+  background-image: url(../img/one.png);
+  background-position: center;
 }
 
 #two {
   transform: translate3d(100px, 0px, 0px) rotateX(-90deg) rotateY(90deg);
+  background-image: url(../img/two.png);
+  background-position: center;
 }
 
 #three {
-  transform: translate3d(0px, -100px, 0px) rotateX(-90deg);
+  transform: translate3d(0px, -100px, 0px) rotateX(90deg);
+  background-image: url(../img/three.png);
+  background-position: center;
 }
 
 #four {
-  transform: translate3d(-100px, 0px, 0px) rotateX(-90deg) rotateY(90deg);
+  transform: translate3d(-100px, 0px, 0px) rotateX(-90deg) rotateY(-90deg);
+  background-image: url(../img/four.png);
+  background-position: center;
 }
 
 #five {
   transform: translate3d(0px, 100px, 0px) rotateX(-90deg);
+  background-image: url(../img/five.png);
+  background-position: center;
 }
 
 #six {
   transform: translate3d(0px, 0px, 100px);
-}
-
-p {
-  font-size: 50px;
+  background-image: url(../img/six.png);
+  background-position: center;
 }
